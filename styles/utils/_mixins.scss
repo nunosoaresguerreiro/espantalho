@@ -1,0 +1,42 @@
+@mixin breakpointDesktop($break: 0) {
+	@media (max-width: $break) {
+		@content;
+	}
+}
+
+@mixin breakpointMobile($break: 0) {
+	@media (min-width: $break) {
+		@content;
+	}
+}
+
+@mixin placeholder($color) {
+	&::placeholder {
+		font-family: inherit;
+		color: $color;
+	}
+
+	/* WebKit (Safari, Chrome) */
+	&:-webkit-input-placeholder {
+		font-family: inherit;
+		color: $color;
+	}
+
+	/* Firefox */
+	&::-moz-placeholder {
+		font-family: inherit;
+		color: $color;
+	}
+
+	/* Firefox 19+ */
+	&:-moz-placeholder {
+		font-family: inherit;
+		color: $color;
+	}
+
+	/* Internet Explorer 10+ */
+	&::-ms-input-placeholder {
+		font-family: inherit;
+		color: $color;
+	}
+}

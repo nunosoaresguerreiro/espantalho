@@ -1,0 +1,210 @@
+@use '../utils/' as *;
+
+.yoga {
+	font-size: 1rem;
+	padding: 7.5rem 0;
+
+	@include breakpointMobile(767px) {
+		padding: 15rem 0;
+	}
+
+	figure {
+		@include breakpointDesktop(768px) {
+			padding: 0 7.5rem 2.5rem 7.5rem;
+		}
+
+		@include breakpointDesktop(480px) {
+			padding: 0 5.5rem 2.5rem 5.5rem;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__header {
+		display: block;
+
+		h1 {
+			color: $primary-titles-aux-pages;
+			font-size: 2.25em;
+			padding-bottom: 1rem;
+			@include breakpointMobile(991px) {
+				font-size: 3.375em;
+			}
+		}
+
+		@include breakpointMobile(769px) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&__content {
+				padding-left: 4rem;
+				flex: 0 0 70%;
+			}
+
+			figure {
+				flex: 0 0 30%;
+			}
+		}
+	}
+
+	&__benefits {
+		display: block;
+
+		h2 {
+			color: $secondary-titles-aux-pages;
+			padding-bottom: 1rem;
+			font-size: 1.5em;
+			@include breakpointMobile(991px) {
+				font-size: 2.25em;
+			}
+		}
+
+		@include breakpointMobile(769px) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row-reverse;
+
+			&__content {
+				padding-right: 2rem;
+				flex: 0 0 70%;
+			}
+
+			figure {
+				flex: 0 0 30%;
+			}
+		}
+
+		li {
+			display: flex;
+			align-items: center;
+			gap: 0.75rem;
+			margin-bottom: 1rem;
+
+			.bullet {
+				width: 0.5rem;
+				height: 0.5rem;
+				background-image: url('../imgs/icons/dot-cream.webp');
+				background-size: cover;
+				background-position: center;
+				flex-shrink: 0;
+			}
+		}
+	}
+
+	&__components {
+		h2 {
+			color: $primary-titles-aux-pages;
+			font-size: 1.5em;
+			@include breakpointMobile(991px) {
+				font-size: 2.25em;
+			}
+		}
+
+		&__wrapper {
+			display: block;
+
+			@include breakpointMobile(480px) {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 2rem;
+			}
+
+			@include breakpointMobile(769px) {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				gap: 2rem;
+			}
+		}
+
+		&__card {
+			&__wrapper {
+				padding: 2rem;
+
+				h3 {
+					color: $secondary-titles-aux-pages;
+					padding-bottom: 1rem;
+					font-size: 1em;
+					@include breakpointMobile(991px) {
+						font-size: 1.25em;
+					}
+				}
+
+				img {
+					padding: 0 5.5rem;
+
+					@include breakpointMobile(480px) {
+						padding: 0 2.5rem;
+					}
+
+					@include breakpointMobile(769px) {
+						padding: 0 1rem;
+					}
+				}
+			}
+		}
+	}
+
+	&__objectives {
+		h2 {
+			color: $primary-titles-aux-pages;
+			padding-bottom: 1rem;
+			font-size: 1.5em;
+			@include breakpointMobile(991px) {
+				font-size: 2.25em;
+			}
+		}
+
+		h3 {
+			color: $secondary-titles-aux-pages;
+			font-weight: 500;
+			padding: 1rem 0;
+			font-size: 1em;
+			@include breakpointMobile(991px) {
+				font-size: 1.25em;
+			}
+		}
+
+		li {
+			display: flex;
+			align-items: center;
+			gap: 0.75rem;
+			margin-bottom: 1rem;
+
+			.bullet {
+				width: 0.5rem;
+				height: 0.5rem;
+				background-image: url('../imgs/icons/dot-cyan.webp');
+				background-size: cover;
+				background-position: center;
+				flex-shrink: 0;
+			}
+		}
+
+		@include breakpointMobile(769px) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row-reverse;
+
+			&__content {
+				padding-right: 2rem;
+				flex: 0 0 70%;
+			}
+
+			figure {
+				flex: 0 0 30%;
+			}
+		}
+	}
+}

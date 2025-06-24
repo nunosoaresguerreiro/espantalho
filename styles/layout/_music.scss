@@ -1,0 +1,181 @@
+@use '../utils/' as *;
+
+.music {
+	font-size: 1rem;
+	padding: 7.5rem 0;
+
+	@include breakpointMobile(767px) {
+		padding: 15rem 0;
+	}
+
+	figure {
+		@include breakpointDesktop(768px) {
+			padding: 0 5.5rem 2.5rem 5.5rem;
+		}
+
+		@include breakpointDesktop(480px) {
+			padding: 0 2.5rem 2.5rem 2.5rem;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+	}
+
+	&__header {
+		display: block;
+
+		h1 {
+			color: $secondary-titles-aux-pages;
+			font-size: 2.25em;
+			padding-bottom: 1rem;
+			@include breakpointMobile(991px) {
+				font-size: 3.375em;
+			}
+		}
+
+		h2 {
+			color: $tertiary-titles-aux-pages;
+			padding: 2rem 0 1rem;
+			font-size: 1em;
+            font-weight: 500;
+			@include breakpointMobile(991px) {
+				font-size: 1.25em;
+			}
+		}
+
+		@include breakpointMobile(769px) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row-reverse;
+
+			&__content {
+				padding-right: 2rem;
+				flex: 0 0 70%;
+			}
+
+			figure {
+				flex: 0 0 30%;
+			}
+		}
+	}
+
+	&__feeling {
+		display: block;
+
+		h2 {
+			color: $secondary-titles-aux-pages;
+			padding-bottom: 1rem;
+			font-size: 1.5em;
+			@include breakpointMobile(991px) {
+				font-size: 2.25em;
+			}
+		}
+
+		h3 {
+			padding: 1rem 0;
+			font-size: 1em;
+			@include breakpointMobile(991px) {
+				font-size: 1.25em;
+			}
+		}
+
+		@include breakpointMobile(769px) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&__content {
+				padding-left: 2rem;
+				flex: 0 0 60%;
+			}
+
+			figure {
+				flex: 0 0 40%;
+			}
+		}
+	}
+
+	&__benefits {
+		h2 {
+			color: $tertiary-titles-aux-pages;
+			padding-bottom: 1rem;
+			font-size: 1.5em;
+			@include breakpointMobile(991px) {
+				font-size: 2.25em;
+			}
+		}
+
+		&__content {
+			li {
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				margin-bottom: 0.75rem;
+
+				.bullet {
+					width: 0.5rem;
+					height: 0.5rem;
+					background-image: url('../imgs/icons/dot-green.webp');
+					background-size: cover;
+					background-position: center;
+					flex-shrink: 0;
+				}
+			}
+		}
+	}
+
+	&__objectives {
+		display: block;
+
+		figure {
+			max-width: 550px;
+			margin: 0 auto;
+		}
+
+		&__content {
+			h2 {
+				color: $secondary-titles-aux-pages;
+				padding-bottom: 1rem;
+				font-size: 1.5em;
+				@include breakpointMobile(991px) {
+					font-size: 2.25em;
+				}
+			}
+
+			li {
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				margin-bottom: 0.75rem;
+
+				.bullet {
+					width: 0.5rem;
+					height: 0.5rem;
+					background-image: url('../imgs/icons/dot-green.webp');
+					background-size: cover;
+					background-position: center;
+					flex-shrink: 0;
+				}
+			}
+		}
+
+		@include breakpointMobile(769px) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row-reverse;
+
+			&__content {
+				flex: 0 0 70%;
+			}
+
+			figure {
+				flex: 0 0 30%;
+			}
+		}
+	}
+}

@@ -1,0 +1,106 @@
+@use '../utils/' as *;
+
+.container {
+	width: 100%;
+	max-width: 1366px;
+	margin: 0 auto;
+	padding: 0 1rem;
+
+	@include breakpointMobile(768px) {
+		padding: 0 2rem;
+	}
+
+	@include breakpointMobile(1366px) {
+		padding: 0 4rem;
+	}
+}
+
+.image-fluid {
+	width: 100%;
+	height: auto;
+}
+
+.image-responsive {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.card-button-o {
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 2rem;
+	font-size: 1em;
+	font-weight: 300;
+	color: $card2-button-text;
+	background: $card2-button-bg;
+	border: 1px solid $card2-button-text-hover;
+	padding: 0.5rem 1rem;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+
+	&:hover {
+		color: $card2-button-text-hover;
+		background: $card2-button-bg-hover;
+		border: 1px solid $card2-button-border-hover;
+	}
+}
+
+.card-button-c {
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 2rem;
+	font-size: 1em;
+	font-weight: 300;
+	color: $card1-button-text;
+	background: $card1-button-bg;
+	border: 1px solid $card1-button-border;
+	padding: 0.5em 1em;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+
+	&:hover {
+		color: $card1-button-text-hover;
+		background: $card1-button-bg-hover;
+		border: 1px solid $card1-button-border-hover;
+	}
+}
+
+.card-button-g {
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 2rem;
+	font-size: 1em;
+	font-weight: 300;
+	color: $card3-button-text;
+	background: $card3-button-bg;
+	border: 1px solid $card3-button-border;
+	padding: 0.5em 1em;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+
+	&:hover {
+		color: $card3-button-text-hover;
+		background: $card3-button-bg-hover;
+		border: 1px solid $card3-button-border-hover;
+	}
+}
+
+.contact-button {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 1000;
+	border: none;
+	cursor: pointer; // Efeito de clique
+}
+
+.contact-button img {
+	width: 60px;
+}
+
+@include breakpointDesktop(480px) {
+	.contact-button img {
+		width: 50px;
+	}
+}

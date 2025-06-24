@@ -1,0 +1,97 @@
+@use '../utils/' as *;
+
+.heroSlider {
+	font-size: 1rem;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	&__item {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		transition: opacity 1s ease-in-out;
+
+		&:nth-child(1) {
+			background: url('../imgs/slider/hero/slider1.jpg') no-repeat center top/cover;
+		}
+
+		&:nth-child(2) {
+			background: url('../imgs/slider/hero/slider2.jpg') no-repeat center top/cover;
+		}
+
+		&:nth-child(3) {
+			background: url('../imgs/slider/hero/slider3.jpg') no-repeat center top/cover;
+		}
+
+		&.active {
+			opacity: 1;
+
+			.heroSlider__content {
+				opacity: 1;
+				transform: translateX(600px);
+			}
+		}
+	}
+
+	&__content {
+		position: absolute;
+		bottom: 58px;
+		left: -600px;
+		opacity: 0;
+		transition: all 1s ease-in-out 300ms;
+
+		h1 {
+			color: $text-light;
+			padding: 1rem 0;
+		}
+		p {
+			font-size: 0.8em;
+			color: $text-light;
+			letter-spacing: 8px;
+			text-transform: uppercase;
+		}
+		a {
+			display: inline-block;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			color: $text-light;
+			background: transparent;
+			border: 1px solid $text-light;
+			padding: 0.875rem 3.275rem;
+		}
+	}
+
+	&__btns {
+		display: block;
+		position: absolute;
+		bottom: 50px;
+		right: 0;
+	}
+}
+
+.btns__wrapper {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+	width: 100%;
+	height: 100%;
+
+	button {
+		background: none;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		display: none;
+
+		@include breakpointMobile(480px) {
+			display: block;
+		}
+	}
+}

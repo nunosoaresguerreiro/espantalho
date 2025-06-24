@@ -1,0 +1,38 @@
+@use '../utils/' as *;
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	/* border: 1px solid green;  */
+}
+
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+	scroll-behavior: smooth;
+}
+
+body {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: auto;
+	background: $bg-dark;
+	color: $text-dark;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+img {
+	display: block;
+}
+
+main {
+	display: block !important;
+}

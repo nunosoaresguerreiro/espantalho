@@ -1,0 +1,45 @@
+@use '../utils/' as *;
+
+.pedagogy {
+	font-size: 1rem;
+
+	&__wrapper {
+		display: block;
+		text-align: center;
+
+		@include breakpointMobile(769px) {
+			text-align: left;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	figure {
+		flex: 0 0 35%;
+		padding: 1rem 5rem 1rem 5rem;
+
+		@include breakpointMobile(769px) {
+			padding: 1rem;
+		}
+	}
+
+	&__content {
+		flex: 0 0 65%;
+
+		h2 {
+			color: $text-secondary;
+			margin-bottom: 1rem;
+
+			@include breakpointDesktop(768px) {
+				br {
+					display: none;
+				}
+			}
+		}
+
+		p {
+			margin-bottom: 1rem;
+		}
+	}
+}

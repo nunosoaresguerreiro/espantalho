@@ -1,0 +1,103 @@
+@use '../utils/' as *;
+
+.hero {
+	padding: 15rem 0 10rem;
+	font-size: 1rem;
+
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__title {
+		position: relative;
+		text-align: center;
+
+		h1 {
+			z-index: 1;
+			color: $tertiary-titles-aux-pages;
+
+			br {
+				@include breakpointDesktop(768px) {
+					display: none;
+				}
+			}
+
+			@include breakpointDesktop(480px) {
+				font-size: 3em;
+			}
+		}
+		h2 {
+			z-index: 1;
+			padding: 2rem 0;
+			color: $secondary-titles-aux-pages;
+			line-height: 1.5;
+
+			font-size: 2em;
+			@include breakpointMobile(991px) {
+				font-size: 3em;
+			}
+		}
+		strong {
+			font-weight: 500;
+		}
+
+		img {
+			opacity: 0.2;
+			position: absolute;
+			z-index: 0;
+
+			&:nth-of-type(1) {
+				width: 65px;
+				bottom: -20px;
+				left: 50px;
+			}
+
+			&:nth-of-type(2) {
+				width: 85px;
+				top: -75px;
+				left: 8%;
+			}
+
+			&:nth-of-type(3) {
+				width: 55px;
+				top: -10px;
+				right: 10%;
+			}
+
+			&:nth-of-type(4) {
+				width: 65px;
+				bottom: 0;
+				right: 35px;
+			}
+
+			@include breakpointDesktop(991px) {
+				&:nth-of-type(1) {
+				width: 65px;
+				bottom: -50px;
+				left: 20px;
+			}
+
+			&:nth-of-type(2) {
+				width: 85px;
+				top: -120px;
+				left: 5%;
+			}
+
+			&:nth-of-type(3) {
+				width: 45px;
+				top: -55px;
+				right: 5%;
+			}
+
+			&:nth-of-type(4) {
+				width: 65px;
+				bottom: 0;
+				right: 5px;
+			}
+			}
+		}
+	}
+}

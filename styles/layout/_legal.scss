@@ -1,0 +1,36 @@
+@use '../utils/' as *;
+
+.legal {
+	font-size: 0.875rem;
+	padding: 2.5rem 0;
+	text-align: center;
+
+	@include breakpointMobile(769px) {
+		text-align: left;
+	}
+
+	&__wrapper {
+		display: block;
+
+		@include breakpointMobile(769px) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	a {
+		color: $text-gray;
+	}
+
+	&__license {
+		margin-bottom: 1rem;
+		@include breakpointMobile(769px) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__reclamation {
+		display: inline-block;
+	}
+}

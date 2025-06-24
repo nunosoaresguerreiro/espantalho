@@ -1,0 +1,81 @@
+/* 1.250 - Major Third - https://typescale.com */
+
+@use '../utils/' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+blockquote,
+small {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 3.375em;
+	/* @include breakpointMobile(480px) {
+		font-size: 5.063em;
+	} */
+}
+
+h2 {
+	font-size: 2.25em;
+/* 	@include breakpointMobile(480px) {
+		font-size: 3.375em;
+	} */
+}
+
+h3 {
+	font-size: 1.5em;
+/* 	@include breakpointMobile(768px) {
+		font-size: 2.25em;
+	} */
+}
+
+h4,
+blockquote {
+	font-size: 1em;
+/* 	@include breakpointMobile(768px) {
+		font-size: 1.5em;
+	} */
+}
+
+h5,
+p,
+a,
+li,
+button,
+span,
+input,
+textarea {
+	font-family: 'Inter', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+	line-height: 1.5;
+	font-size: 1em;
+}
+
+small {
+	font-size: 0.64em;
+	letter-spacing: 6px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding-bottom: 1rem;
+	@include breakpointMobile(768px) {
+		font-size: 0.8em;
+	}
+}
+
+html {
+	font-size: 16px;
+
+	@include breakpointDesktop(1366px) {
+		font-size: 14px;
+	}
+}
